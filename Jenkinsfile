@@ -1,13 +1,13 @@
 pipeline {
 
-    agent{
-        docker {
-            image 'khalid/ansible'
-        }
-    }
-    environment {
-        ANSIBLE_HOST_KEY_CHECKING = 'False'
-    }
+    // agent{
+    //     docker {
+    //         image 'khalid/ansible'
+    //     }
+    // }
+    // environment {
+    //     ANSIBLE_HOST_KEY_CHECKING = 'False'
+    // }
     stages {
 
         stage('Deploy Mysql container') {
