@@ -6,7 +6,7 @@ pipeline {
         stage('Deploy Mysql container') {
            
             steps {
-                withCredentials([file(credentialsId: 'ansible_key', variable: 'ansible_key')]) {
+                // withCredentials([file(credentialsId: 'ansible_key', variable: 'ansible_key')]) {
                     // sh 'ls -la'
                     // sh "cp /$ansible_key ansible_key"
                     // sh 'cat ansible_key'
