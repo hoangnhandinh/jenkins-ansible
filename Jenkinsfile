@@ -9,9 +9,9 @@ pipeline {
         stage('Deploy Spring Boot to DEV') {
             steps {
                 script {
-                    sh 'sudo apt install -y software-properties-common' // -y để tránh xác nhận yêu cầu
-                    sh 'sudo apt-add-repository --yes --update ppa:ansible/ansible'
-                    sh 'sudo apt install -y ansible'
+                    sh 'apt install -y software-properties-common' // -y để tránh xác nhận yêu cầu
+                    sh 'apt-add-repository --yes --update ppa:ansible/ansible'
+                    sh 'apt install -y ansible'
                     sh 'ansible-playbook -i hosts playbook.yml'
                 }
             }
